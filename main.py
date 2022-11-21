@@ -1,35 +1,39 @@
-
+#!/bin/python3
 
 import math
 import os
 import random
 import re
-import statistics
 import sys
 
 
 
 #
-# Complete the 'findMedian' function below.
+# Complete the 'flippingMatrix' function below.
 #
 # The function is expected to return an INTEGER.
-# The function accepts INTEGER_ARRAY arr as parameter.
+# The function accepts 2D_INTEGER_ARRAY matrix as parameter.
 #
 
-def findMedian(arr:list):
-    #arr.sort()
-    #return arr[(len(arr)-1)//2]
-    return statistics.median(arr)
+def flippingMatrix(matrix):
+    n=len(matrix[0])//2
+    
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    n = int(input().strip())
+    q = int(input().strip())
 
-    arr = list(map(int, input().rstrip().split()))
+    for q_itr in range(q):
+        n = int(input().strip())
 
-    result = findMedian(arr)
+        matrix = []
 
-    fptr.write(str(result) + '\n')
+        for _ in range(2 * n):
+            matrix.append(list(map(int, input().rstrip().split())))
+
+        result = flippingMatrix(matrix)
+
+        fptr.write(str(result) + '\n')
 
     fptr.close()

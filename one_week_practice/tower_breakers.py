@@ -19,8 +19,7 @@ def towerBreakers(n, m):
     #n: number of towers, m: each tower's height
     #each player can reduce the height of a tower to some number that evenly divides the height at start of turn
     if m==1:return 2#in this case player has no moves at start
-    if n==1 and m>1:#in this case, player 1 reduces the tower to 1
-        return 1
+    
     if n %2==1:return 1#player 1 gets to make the 1st move on the last tower and reduce it to 1
     else:return 2#player 2 gets to make the 1st move on the last tower and reduce it to 1
 

@@ -28,5 +28,6 @@ def numBST(nodeValues):
 
 
 if __name__ == '__main__':
-    n_s = [5]
+    n_s = [5]#for n in n_s, find the catalan number(n)
+    #the catalan number(n) is equal to the possible number of distinct n node BSTs
     print(numBST(n_s))
